@@ -8,7 +8,7 @@ export default class Navbar extends Component {
         return (
 
             <div id="nav">
-                <img src="images/baylogoWhite.png" id="logo"></img>
+                <img src="" id="logo" alt="logo"></img>
                 <div id="menu" onClick={navAnim}>
                     <div></div>
                     <div id="opacity-bar" style={{opacity:1}}></div>

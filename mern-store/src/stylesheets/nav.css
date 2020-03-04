@@ -12,7 +12,7 @@ html {
 
 /**NAV STYLES**/
 #nav {
-    position: relative;
+    position: fixed;
     width:100%;
     height:50px;
     top:0px;
@@ -24,6 +24,7 @@ html {
 }
 #nav #menu-options {
     text-align: center;
+    padding-top:2rem;
 }
 #nav #menu-options div {
     padding:1rem;
@@ -95,4 +96,8 @@ html {
     40% {transform: translateY(-7px);}
     80% {transform: translateY(0px) rotate(0deg) ;}
     100% {transform: translateY(0px);}
+}
+
+.container {
+    padding-top:50px;
 }

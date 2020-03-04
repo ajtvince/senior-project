@@ -1,0 +1,56 @@
+.browseContainer {
+    width:100%;
+    max-width:800px;
+    height:auto;
+    margin:auto;
+    background-color:lightskyblue;
+    padding-bottom:2rem;
+}
+@media only screen and (max-width:600px) {
+    .browseContainer div {
+        width:100%;
+        box-sizing: border-box;
+        display:inline-block;
+        padding:2rem;
+        padding-bottom:0px;
+    }
+    .browseContainer .prdContainer {
+        background-color:white;
+        width:100%;
+        padding:1rem;
+        padding-bottom:2rem;
+        position: relative;
+    }
+    .browseContainer div > div > div {
+        padding:0px;
+        overflow:hidden;
+    }
+    .browseContainer .prdName {
+        font-size:1.5rem;
+    }
+    .browseContainer .prdDesc {
+        color:darkgray;
+    }
+    .browseContainer .prdPrice {
+        position:absolute;
+        bottom:0px;
+        left:0px;
+        background-color:lightgreen;
+        width:auto;
+        padding:8px;
+    }
+    .browseContainer .prdImg {
+        width:100%;
+        height:200px;
+        background-color:gray;
+    }
+    .browseContainer .goToPrd {
+        position:absolute;
+        font-size:1.5rem;
+        width:auto;
+        bottom:0px;
+        right:0px;
+        padding:.25rem;
+        padding-right:.5rem;
+    }
+}
