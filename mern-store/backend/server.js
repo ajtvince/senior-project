@@ -19,9 +19,11 @@ connection.once('open', () => {
 
 const productRouter = require('./routes/products');
 const userRouter = require('./routes/users');
+const orderRouter = require('./routes/order');
 
 app.use('/products', productRouter);
 app.use('/users', userRouter);
+app.use('/order', orderRouter);
 
 
 app.listen(port, () => {

@@ -3,54 +3,85 @@
     max-width:800px;
     height:auto;
     margin:auto;
-    background-color:lightskyblue;
     padding-bottom:2rem;
 }
-@media only screen and (max-width:600px) {
-    .browseContainer div {
-        width:100%;
+.container {
+    padding-right:.5rem;
+    padding-left:.5rem;
+}
+    .browseContainer > div {
+        width:50%;
         box-sizing: border-box;
-        display:inline-block;
-        padding:2rem;
-        padding-bottom:0px;
+        display:inline-flex;
+        padding:.5rem;
+        height:auto;
     }
     .browseContainer .prdContainer {
-        background-color:white;
         width:100%;
-        padding:1rem;
-        padding-bottom:2rem;
         position: relative;
     }
-    .browseContainer div > div > div {
-        padding:0px;
-        overflow:hidden;
-    }
     .browseContainer .prdName {
-        font-size:1.5rem;
-    }
-    .browseContainer .prdDesc {
-        color:darkgray;
+        text-align: center;
+        padding-top:.5rem;
+        padding-bottom:.5rem;
     }
     .browseContainer .prdPrice {
-        position:absolute;
-        bottom:0px;
-        left:0px;
-        background-color:lightgreen;
-        width:auto;
-        padding:8px;
+        text-align: center;
+        color:darkslategray;
+    }
+    .browseContainer .prdOutStock {
+        text-align: center;
+        background-color:rgba(0,0,0,.4);
+        position: absolute;
+        top:0px;
+        width:100%;
+        padding:.5rem;
+        padding-top:1rem;
+        padding-bottom:1rem; 
     }
     .browseContainer .prdImg {
         width:100%;
-        height:200px;
-        background-color:gray;
+        max-height:500px;
+        background-color:lightblue;
+        object-fit: cover;
+        overflow:hidden;
+        position: relative;
     }
-    .browseContainer .goToPrd {
+    .browseContainer .prdImg .prdAddToCart {
         position:absolute;
-        font-size:1.5rem;
-        width:auto;
-        bottom:0px;
         right:0px;
-        padding:.25rem;
-        padding-right:.5rem;
+        bottom:0px;
+        height:36px;
+        width:36px;
+        color:white;
+        font-size:40px;
+        line-height: 36px;
+        text-align: center;
+        background-color:mediumseagreen;
+        cursor: pointer;
     }
+    .prdImg img {
+        width:100%;
+        padding:1rem;
+        padding-top:2rem;
+    }
+    .container .sortBox {
+        width:50%;
+        display:inline-flex;
+        padding:6px;
+    }
+    .sortBox > div {
+        border:4px black solid;
+        width:100%;
+        padding:8px;
+        position: relative;
+    }
+    .sortBox > div > div {
+        display: inline;
+        right:6px;
+        position: absolute;
+    }
+
+.container {
+    margin:auto;
 }

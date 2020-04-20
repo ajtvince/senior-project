@@ -7,20 +7,4 @@ router.route('/').get((req, res) => {
         .catch(err => res.status(400).json('ERROR ON BACKEND: ' + err));
 });
 
-
-router.route('/add').post((req, res) => {
-    const productID = req.body.productID;
-    const productDescription = req.body.productDescription;
-    
-    const newProduct = new Product({
-        productID, 
-        productDescription,
-    });
-    
-    newProduct.save()
-        .then(() => res.json('Product added'))
-        .catch(err => res.status(400).json('Error' + err));
-});
-
-
 module.exports = router;
