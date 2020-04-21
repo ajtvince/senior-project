@@ -36,7 +36,7 @@ function getUserLoginStatus() {
                     <div style={{position:'relative', width:'100%'}}><Link style={{textDecoration:'none'}} to="/checkout"><div style={{width:'100%', padding:12, backgroundColor:'mediumseagreen', color:'white', textDecoration:'none'}}>Contine to Check Out<FontAwesomeIcon icon={faArrowRight} style={{position:'absolute', right:12}}/></div></Link></div>
                 </div>
     } else if (localStorage.getItem("user") == null && localStorage.getItem("cart") != null) {
-        return <div>Ready to check out? Sign in to continue.</div>
+        return <div>Ready to check out? <Link to='/login'>Sign in</Link> to continue.</div>
     } else {
         return <div>Items you add to your cart will appear here.</div>
     }

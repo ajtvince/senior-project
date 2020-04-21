@@ -99,10 +99,10 @@ export default class Login extends Component {
                         <div className="login-input"><label>Password: </label><input type="password" required value={this.state.password} onChange={this.onChangePassword}></input></div>
                         <div style={{textAlign:'center', color:'darkred', paddingTop:4}} id='login-error'></div>
                         <div className="btn-container">
-                            <input style={{marginBottom:'8px',cursor:'pointer', fontSize: '18px', border: 'none', width:90, backgroundColor: 'darkred', color:'white', padding:8}} id="login-btn" type="submit" value="Sign In"></input>
+                            <input style={{marginBottom:'8px',cursor:'pointer', fontSize: '18px', border: 'none', width:90, backgroundColor: 'mediumseagreen', color:'white', padding:8}} id="login-btn" type="submit" value="Sign In"></input>
                         </div>
                     </form>
-                    <Link to='/signup'><div style={{fontSize: '18px',textAlign: 'center', margin:'auto', width:90, backgroundColor: 'darkred', color:'white', padding:8}}>Sign Up</div></Link>
+                    <Link style={{textDecoration:'none'}} to='/signup'><div style={{fontSize: '18px',textAlign: 'center', margin:'auto', width:90, backgroundColor: 'mediumseagreen', color:'white', padding:8}}>Sign Up</div></Link>
                 </div>
             )
         } else {
@@ -125,7 +125,7 @@ export default class Login extends Component {
         return (
 
             <div class="container">
-                <h2>CROSSED</h2>
+                <h2>CROSSED LOGIN</h2>
                 <div id="login-container">
                 {this.getLoginState()}
                 

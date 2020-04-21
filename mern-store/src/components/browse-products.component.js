@@ -51,10 +51,6 @@ const ProductOutStock = props => (
     </div>
 )
 
-const SortBox = props => (
-    <div style={{backgroundColor:"red", width:"100px", height:"100px"}}>test</div>
-)
-
 export default class BrowseProducts extends Component {
     
     constructor(props) {
@@ -85,10 +81,6 @@ export default class BrowseProducts extends Component {
                 }
             })
 
-    }
-
-    filterList() {
-        return <SortBox />
     }
     
     render() {

@@ -100,9 +100,9 @@ export default class BrowseProducts extends Component {
         return (
             <div id="login-container">
                 <form onSubmit={this.onSubmit}>
-                    <div className="login-input"><label>Credit Card #: </label><input type="text" required value={this.state.username} onChange={this.onChangeCard}></input></div>
-                    <div className="login-input"><label>Expiration: </label><input type="text" placeholder="MM/YY" required value={this.state.password} onChange={this.onChangeDate}></input></div>
-                    <div className="login-input"><label>Security Code: </label><input type="text" required value={this.state.name} onChange={this.onChangeCode}></input></div>
+                    <div className="login-input"><label>Credit Card #: </label><input maxLength="16" type="text" required value={this.state.username} onChange={this.onChangeCard}></input></div>
+                    <div className="login-input"><label>Expiration: </label><input maxLength="5" type="text" placeholder="MM/YY" required value={this.state.password} onChange={this.onChangeDate}></input></div>
+                    <div className="login-input"><label>Security Code: </label><input maxLength="3" type="text" required value={this.state.name} onChange={this.onChangeCode}></input></div>
                     <div className="login-input"><label>Name on Card: </label><input type="text" required value={this.state.streetAddress} onChange={this.onChangeName}></input></div>
                     <div style={{textAlign:'right', paddingTop:'8px'}}><input style={{backgroundColor:'mediumseagreen', border:'0px', padding:'6px', cursor:'pointer'}} type="submit" value="Place Order"></input></div>
                 </form>
