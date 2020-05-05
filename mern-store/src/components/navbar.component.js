@@ -11,7 +11,7 @@ export default class Navbar extends Component {
         return (
 
             <div id="nav">
-                <Link style={{textDecoration:'none'}} onClick={navAnim} id="logo" to="/"><img style={{width:'100px', paddingTop:'16px'}} alt='logo' src={logo}></img></Link>
+                <Link style={{textDecoration:'none'}} id="logo" to="/"><img style={{width:'100px', paddingTop:'16px'}} alt='logo' src={logo}></img></Link>
                 <div id="menu" onClick={navAnim}>
                     <div></div>
                     <div id="opacity-bar" style={{opacity:1}}></div>
