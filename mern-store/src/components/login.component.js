@@ -81,6 +81,7 @@ export default class Login extends Component {
                 } else {
                     console.log('incorrect password');
                     ReactDOM.render(<div>Incorrect password</div>, document.getElementById('login-error'));
+                    break;
                 }
             } else {
                 console.log('account not found');
