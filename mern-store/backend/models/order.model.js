@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 const orderSchema = new Schema({
     orderNum: { type: Number, required: true },
     orderUser: { type: String, required: true },
+    orderUserID: { type: String, required: true },
     orderPrice: { type: Number, required: true },
     shippingAddress: { type: String, required: true },
     orderItems: { type: Array, required: true },

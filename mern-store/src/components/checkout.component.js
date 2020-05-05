@@ -37,6 +37,7 @@ export default class BrowseProducts extends Component {
         this.state = {
             orderNum: '',
             orderUser: '',
+            orderUserID: '',
             orderPrice: '',
             orderItems: '',
             shippingAddress: '',
@@ -76,9 +77,12 @@ export default class BrowseProducts extends Component {
     onSubmit(e) {
         e.preventDefault();
 
+        let d = new Date();
+
         const order = {
-            orderNum: '2',
+            orderNum: d.getTime(),
             orderUser: JSON.parse(localStorage.getItem('user')).name,
+            orderUserID: JSON.parse(localStorage.getItem('user')).username,
             orderPrice: getFinalPrice(),
             shippingAddress: (JSON.parse(localStorage.getItem('user')).streetAddress + '. ' + JSON.parse(localStorage.getItem('user')).city + ', ' + JSON.parse(localStorage.getItem('user')).state + ' ' + JSON.parse(localStorage.getItem('user')).zip),
             orderItems: JSON.parse(localStorage.getItem('cart')),

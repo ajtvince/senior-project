@@ -71,7 +71,7 @@ export default class Login extends Component {
         });
     }
 
-    onSubmit(e) {
+    async onSubmit(e) {
         e.preventDefault();
 
         const user = {
@@ -86,10 +86,33 @@ export default class Login extends Component {
 
         console.log(user);
 
-        axios.post('http://localhost:5000/users/add', user)
-            .then(res => console.log(res.data));
 
-        ReactDOM.render(<div><div>Thank you for signing up, {this.state.name}.</div><a href="http://localhost:3000/login">Back to Login</a></div>, document.getElementById('confirmLogin'));
+        let userArray;
+
+        await axios.get('http://localhost:5000/users/')
+            .then(res => {
+                userArray = res.data
+            }
+            );
+
+        console.log(userArray);
+
+        let accountBool = false;
+
+        for (let x = 0; x < userArray.length; x++) {
+            if (user.username == userArray[x].username) {
+                console.log('account found');
+                accountBool = true;
+            }
+        }
+
+        if (accountBool) {
+            ReactDOM.render(<div><div>The username {user.username} is already in use. Please use a different username.</div><a href="http://localhost:3000/login">Back to Login</a></div>, document.getElementById('confirmLogin'));
+        } else {
+            axios.post('http://localhost:5000/users/add', user)
+            .then(res => console.log(res.data));
+            ReactDOM.render(<div><div>Thank you for signing up, {this.state.name}.</div><a href="http://localhost:3000/login">Back to Login</a></div>, document.getElementById('confirmLogin'));
+        }
     }
     
     getLoginState() {
